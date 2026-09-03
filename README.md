@@ -91,7 +91,6 @@ Aunque la mayoría de los hosts son pequeños operadores, una proporción muy re
 * Pandas
 * NumPy
 * Matplotlib
-* Seaborn
 * Jupyter Notebook
 
 ## Project Structure
