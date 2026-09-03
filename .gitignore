@@ -1,0 +1,23 @@
+# Environment
+env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/s
+
+# Data
+data/raw/
+
+# Temporary files
+*.tmp
