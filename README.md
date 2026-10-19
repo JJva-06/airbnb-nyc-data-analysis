@@ -14,9 +14,17 @@ Las visualizaciones fueron seleccionadas siguiendo principios del **framework de
 * Analizar la composición de los tipos de alojamiento por barrio.
 * Evaluar la concentración de listings entre los diferentes hosts.
 
+## Data
+
+El dataset (`data/airbnb_nyc_2024.csv`) contiene **36,138 listings** de los 5 neighbourhood groups de NYC y **16,800 hosts**. Los precios van de $15 a $608 por noche.
+
+> **Nota:** la columna `reviews_per_month` es igual a `number_of_reviews` en ~64% de las filas, por lo que no es confiable. El análisis no la utiliza.
+
 ## Visualizations
 
 ### 1. Distribución de precios
+
+![Distribución de precios](outputs/figures/viz1_distribucion_precios.png)
 
 La distribución presenta una marcada asimetría hacia precios elevados.
 
@@ -28,22 +36,29 @@ La diferencia de $23 entre la media y la mediana muestra que los alojamientos de
 
 ### 2. Ranking de barrios por precio
 
-Existen diferencias importantes entre los barrios de NYC.
+![Ranking de barrios](outputs/figures/viz2_ranking_barrios.png)
+
+Existen diferencias importantes entre los barrios de NYC (precio mediano por noche).
 
 * **Manhattan:** $189 por noche
 * **Bronx:** $54 por noche
 
-El precio promedio de Manhattan es aproximadamente **3.5 veces** el del Bronx.
+El precio mediano de Manhattan es aproximadamente **3.5 veces** el del Bronx.
 
 ### 3. Relación entre reviews y precio
+
+![Reviews vs precio](outputs/figures/viz3_reviews_vs_precio.png)
 
 Se observa una relación negativa débil entre el precio y la cantidad de reviews:
 
 * **Correlación:** r = -0.170
+* Los listings de **$50–150** acumulan el **50%** de todas las reviews.
 
 Los alojamientos de mayor precio tienden a acumular menos reviews. Una posible explicación es una mayor rotación de huéspedes en el segmento económico, aunque esta relación no implica causalidad.
 
 ### 4. Composición por tipo de alojamiento
+
+![Composición por tipo](outputs/figures/viz4_composicion_tipo.png)
 
 La composición del mercado varía considerablemente según el barrio.
 
@@ -59,10 +74,13 @@ Manhattan presenta una mayor proporción de alojamientos completos, mientras que
 
 ### 5. Concentración del mercado
 
+![Concentración del mercado](outputs/figures/viz5_concentracion_mercado.png)
+
 El mercado presenta una elevada concentración entre los hosts con mayor número de listings.
 
 * El **1% de los hosts más grandes controla el 28%** de los listings.
-* El **80% de los hosts** tienen únicamente 1–2 listings y controlan aproximadamente el **37% del mercado**.
+* El **92% de los hosts** tiene únicamente 1–2 listings.
+* El **80% de los hosts más pequeños** controla apenas el **37%** de los listings.
 
 Esto sugiere la presencia de pocos operadores profesionales de gran escala junto con una amplia cantidad de hosts individuales.
 
@@ -96,13 +114,12 @@ Aunque la mayoría de los hosts son pequeños operadores, una proporción muy re
 ## Project Structure
 
 ```text
-airbnb-nyc-market-insights/
+airbnb-nyc-data-analysis/
 │
 ├── data/
 │   └── airbnb_nyc_2024.csv
 ├── notebooks/
 │   └── analysis.ipynb
-│
 ├── outputs/
 │   └── figures/
 │
@@ -116,6 +133,8 @@ airbnb-nyc-market-insights/
 Clone the repository and install the required dependencies:
 
 ```bash
+git clone https://github.com/JJva-06/airbnb-nyc-data-analysis.git
+cd airbnb-nyc-data-analysis
 pip install -r requirements.txt
 ```
 
@@ -125,7 +144,7 @@ Open the notebook:
 jupyter notebook
 ```
 
-Then run `notebooks/analysis.ipynb`.
+Then open `notebooks/analysis.ipynb` and run all cells. The notebook reads the data and saves figures using paths relative to `notebooks/`, so it must be run from that folder (Jupyter does this by default).
 
 ## Methodology
 
