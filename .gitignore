@@ -14,7 +14,7 @@ __pycache__/
 Thumbs.db
 
 # VS Code
-.vscode/s
+.vscode/
 
 # Data
 data/raw/
