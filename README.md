@@ -1,12 +1,12 @@
-# Airbnb NYC 2024: Data Analysis & Market Insights
+# Airbnb NYC 2024: Análisis de datos e insights del mercado
 
-## Overview
+## Descripción general
 
 Análisis exploratorio del mercado de Airbnb en Nueva York utilizando datos de 2024. El proyecto busca identificar patrones en precios, reviews, tipos de alojamiento y concentración de listings entre hosts.
 
 Las visualizaciones fueron seleccionadas siguiendo principios del **framework de Cleveland & McGill**, priorizando el tipo de representación gráfica más adecuado según la tarea de análisis y comparación.
 
-## Objectives
+## Objetivos
 
 * Analizar la distribución de precios de los alojamientos.
 * Comparar los precios entre diferentes barrios.
@@ -14,13 +14,13 @@ Las visualizaciones fueron seleccionadas siguiendo principios del **framework de
 * Analizar la composición de los tipos de alojamiento por barrio.
 * Evaluar la concentración de listings entre los diferentes hosts.
 
-## Data
+## Datos
 
-El dataset (`data/airbnb_nyc_2024.csv`) contiene **36,138 listings** de los 5 neighbourhood groups de NYC y **16,800 hosts**. Los precios van de $15 a $608 por noche.
+El dataset (`data/airbnb_nyc_2024.csv`) contiene **36,138 listings** de los 5 distritos de NYC y **16,800 hosts**. Los precios van de $15 a $608 por noche.
 
 > **Nota:** la columna `reviews_per_month` es igual a `number_of_reviews` en ~64% de las filas, por lo que no es confiable. El análisis no la utiliza.
 
-## Visualizations
+## Visualizaciones
 
 ### 1. Distribución de precios
 
@@ -84,7 +84,7 @@ El mercado presenta una elevada concentración entre los hosts con mayor número
 
 Esto sugiere la presencia de pocos operadores profesionales de gran escala junto con una amplia cantidad de hosts individuales.
 
-## Key Takeaways
+## Conclusiones principales
 
 El análisis muestra que el mercado de Airbnb en NYC presenta diferencias importantes tanto en precios como en la estructura de la oferta.
 
@@ -98,12 +98,12 @@ Manhattan presenta precios considerablemente superiores a los del resto del merc
 La correlación negativa entre precio y reviews sugiere que los alojamientos de menor precio tienden a acumular más reviews.
 
 **4. La oferta cambia según el barrio.**
-La proporción de alojamientos completos frente a habitaciones privadas varía significativamente entre los diferentes neighbourhood groups.
+La proporción de alojamientos completos frente a habitaciones privadas varía significativamente entre los diferentes distritos.
 
 **5. El mercado está concentrado en pocos hosts grandes.**
 Aunque la mayoría de los hosts son pequeños operadores, una proporción muy reducida concentra una parte considerable de los listings.
 
-## Technologies
+## Tecnologías
 
 * Python
 * Pandas
@@ -111,7 +111,7 @@ Aunque la mayoría de los hosts son pequeños operadores, una proporción muy re
 * Matplotlib
 * Jupyter Notebook
 
-## Project Structure
+## Estructura del proyecto
 
 ```text
 airbnb-nyc-data-analysis/
@@ -128,9 +128,9 @@ airbnb-nyc-data-analysis/
 └── README.md
 ```
 
-## How to Run
+## Cómo ejecutarlo
 
-Clone the repository and install the required dependencies:
+Clona el repositorio e instala las dependencias:
 
 ```bash
 git clone https://github.com/JJva-06/airbnb-nyc-data-analysis.git
@@ -138,22 +138,22 @@ cd airbnb-nyc-data-analysis
 pip install -r requirements.txt
 ```
 
-Open the notebook:
+Inicia Jupyter:
 
 ```bash
 jupyter notebook
 ```
 
-Then open `notebooks/analysis.ipynb` and run all cells. The notebook reads the data and saves figures using paths relative to `notebooks/`, so it must be run from that folder (Jupyter does this by default).
+Luego abre `notebooks/analysis.ipynb` y ejecuta todas las celdas. El notebook lee los datos y guarda las figuras con rutas relativas a `notebooks/`, por lo que debe ejecutarse desde esa carpeta (Jupyter lo hace por defecto).
 
-## Methodology
+## Metodología
 
-The project follows an exploratory data analysis approach. Visualizations were selected based on the analytical task they needed to address, following the principles described by **Cleveland & McGill** regarding the effectiveness of graphical encodings for quantitative comparisons.
+El proyecto sigue un enfoque de análisis exploratorio de datos. Cada visualización se eligió según la tarea analítica que debía resolver, siguiendo los principios de **Cleveland & McGill** sobre la efectividad de las codificaciones gráficas para comparaciones cuantitativas.
 
-Each visualization is structured around:
+Cada visualización se estructura así:
 
-**Business Question → Visualization → Justification → Insight**
+**Pregunta de negocio → Visualización → Justificación → Insight**
 
-## Author
+## Autor
 
 José Villanueva
